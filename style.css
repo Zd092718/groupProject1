@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    min-width: 480px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    width: 70em;
+    min-height: 40em;
+}
+
+#question-container {
+    width: 800px;
+    max-width: 78%;
+    border: 2px solid black;
+    
+}
