@@ -1,5 +1,4 @@
 
-
 // creates El for button and definition
 btnEl = document.getElementById('btn')
 reultsReturnEl = document.getElementById('results-return')
@@ -12,10 +11,7 @@ function showDefinition(e){
     btn.classList.add('hide')
     reultsReturnEl.classList.remove('hide')
 }
-
-
-// api fetch 
-
+// api fetch
 var dictApi = `https://api.dictionaryapi.dev/api/v2/entries/en/hello`
 var linguaApi = `https://lingua-robot.p.rapidapi.com/language/v1/entries/en/hello`
 fetch(linguaApi, {
