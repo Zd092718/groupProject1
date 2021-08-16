@@ -18,14 +18,33 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-
-    width: 70em;
-    min-height: 40em;
 }
 
 #question-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 800px;
+    height: 340px;
     max-width: 78%;
+    background-color: blanchedalmond;
     border: 2px solid black;
-    
 }
+
+#btn {
+    background-color: grey;
+    color: white;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+
+
+
+/* .hide {
+    display:none;
+} */
