@@ -17,8 +17,8 @@ main {
 .container {
     display: flex;
     flex-wrap: wrap;
+    border: solid black 5px;
     flex-direction: column;
-
     width: 70em;
     min-height: 40em;
 }
@@ -29,3 +29,9 @@ main {
     border: 2px solid black;
     
 }
+<<<<<<< HEAD
+=======
+.hide{
+    display: none;
+}
+>>>>>>> 66a53d145772c4fd470e71cc437c1d75678baee3
