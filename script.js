@@ -48,8 +48,8 @@ fetch(randomWord)
         console.log(dictData.entries)
         console.log(word)
         if(dictData.entries === []){
-          window.location.reload();
-        };
+          return resetFunction();
+        }
           var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
           switch (partOfSpeech){
               case 'noun' : 
@@ -90,7 +90,9 @@ fetch(randomWord)
 })};
 
 
-
+function resetFunction(){
+  window.location.reload();
+}
 
     //color link changes
     // will need to redefine parts of speech variable to match data from api
