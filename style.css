@@ -41,6 +41,7 @@ button {
     font-size: 2em;
     color: rgb(12, 12, 12);
     box-shadow: 10px 10px 2px 1px rgb(12, 12, 12);
+    cursor: pointer;
 }
 
 #results-return {
