@@ -47,31 +47,59 @@ fetch(randomWord)
     .then(dictData => {
         console.log(dictData.entries)
         console.log(word)
+
+      
+          var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
+
+
         if(dictData.entries === []){
           window.location.reload();
         };
           var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
+
           switch (partOfSpeech){
               case 'noun' : 
           document.body.style.backgroundColor = 'red'
+            break;
               case 'verb' :
+
+          document.body.style.backgroundColor = 'green'
+          break;            
+              case 'adverb' :
+          document.body.style.backgroundColor = 'brown'
+          break;            
+              case 'pronoun' :
+          document.body.style.backgroundColor = 'lemonchiffon'
+          break;            
+
           document.body.style.backgroundColor = 'green'           
               case 'adverb' :
           document.body.style.backgroundColor = 'brown'     
               case 'pronoun' :
           document.body.style.backgroundColor = 'lemonchiffon'        
+
               case 'adjective' :
-          document.body.style.backgroundColor = 'darkslateblue'            
+          document.body.style.backgroundColor = 'darkslateblue' 
+          break;           
               case 'article' :
+
+          document.body.style.backgroundColor = 'periwinke'
+          break;            
+
           document.body.style.backgroundColor = 'periwinkle'            
+
               case 'preposition' :
-          document.body.style.backgroundColor = 'white'            
+          document.body.style.backgroundColor = 'white' 
+          break;           
               case 'conjunction' :
+
+          document.body.style.backgroundColor = 'orange' 
+          break;           
+
           document.body.style.backgroundColor = 'orange';        
+
           };
 
-
-          
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
           wordPrint.classList.add('wordItem');
