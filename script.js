@@ -1,16 +1,15 @@
 
 // creates El for button and definition
-btnEl = document.getElementById('btn')
-reultsReturnEl = document.getElementById('results-return');
-resultsListEl = document.querySelector('#results-list')
-
+var btnEl = document.getElementById('btn')
+var resultsReturnEl = document.getElementById('results-return');
+var resultsListEl = document.getElementById('results-list')
 
 // on click, hides button and shows definition
 btnEl.addEventListener('click', showDefinition)
 function showDefinition(e){
     e.preventDefault()
     btn.classList.add('hide')
-    reultsReturnEl.classList.remove('hide');
+    resultsReturnEl.classList.remove('hide');
     generateData();
     colorPart();
 }
@@ -70,11 +69,17 @@ fetch(randomWord)
           //     case e :
           // document.body.style.backgroundColor = 'orange'            
           // };
+          // var resultList = document.createElement('ul');
+          // resultsReturnEl.append(resultList);
+          var wordEl = dictData.entries[0].entry;
+          var wordPrint = document.createElement('li');
+          wordPrint.textContent = wordEl;
+          resultsListEl.append(wordPrint);
           var definition = dictData.entries[0].lexemes[0].senses[0].definition;
           var defPrint = document.createElement('li');
           defPrint.textContent = definition;
           resultsListEl.append(defPrint);
-          var example;
+          var example = dictData.entries[0];
 
     })
 })};
