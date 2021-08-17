@@ -1,10 +1,7 @@
 * {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    box-sizing: border-box;
 }
 /* colors-pallet 90's macintosh II  */
 body {
@@ -15,7 +12,10 @@ body {
     justify-content: space-around;
     align-items: center;
     min-width: 480px;
-    min-height: ;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    min-height: 780px;
 }
 /* 90's macintosh II box and shadow style */
 .container {
@@ -46,6 +46,18 @@ button {
 #results-return {
     font-size: 1.75em;
     color:rgb(228, 231, 231);
+}
+
+#results-list {
+    color:rgb(228, 231, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-size: .75em;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 .hide{
