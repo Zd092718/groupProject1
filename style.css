@@ -3,32 +3,52 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-main {
-    background-color: aqua;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100vw;
-    min-width: 480px;
 }
-
+/* colors-pallet 90's macintosh II  */
+body {
+    background-color: rgb(228, 231, 231);
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 480px;
+    min-height: ;
+}
+/* 90's macintosh II box and shadow style */
 .container {
     display: flex;
-    flex-wrap: wrap;
-    border: solid black 5px;
     flex-direction: column;
-    width: 70em;
-    min-height: 40em;
+    flex-wrap: nowrap;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+    width: 80vw;
+    max-width: 80%;
+    border: 2px solid rgb(228, 231, 231);
+    background: rgb(162, 163, 162);
+    box-shadow: 12px 12px 2px 1px rgb(12, 12, 12);
 }
 
-#question-container {
-    width: 800px;
-    max-width: 78%;
-    border: 2px solid black;
-    
+button {
+    border: 2px rgb(12, 12, 12);
+    border-style: outset;
+    height: 10vh;
+    width: 35vw;
+    font-size: 2em;
+    color: rgb(12, 12, 12);
+    box-shadow: 10px 10px 2px 1px rgb(12, 12, 12);
 }
+
+#results-return {
+    font-size: 1.75em;
+    color:rgb(228, 231, 231);
+}
+
 .hide{
     display: none;
 }
+
