@@ -53,16 +53,18 @@ fetch(randomWord)
 
 
         if(dictData.entries === []){
-          return resetFunction();
+            window.location.reload();
+        };
+             return resetFunction();
         }
+
           var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
 
           switch (partOfSpeech){
               case 'noun' : 
           document.body.style.backgroundColor = 'red'
-            break;
+          break;
               case 'verb' :
-
           document.body.style.backgroundColor = 'green'
           break;            
               case 'adverb' :
@@ -70,34 +72,19 @@ fetch(randomWord)
           break;            
               case 'pronoun' :
           document.body.style.backgroundColor = 'lemonchiffon'
-          break;            
-
-          document.body.style.backgroundColor = 'green'           
-              case 'adverb' :
-          document.body.style.backgroundColor = 'brown'     
-              case 'pronoun' :
-          document.body.style.backgroundColor = 'lemonchiffon'        
-
+          break;
               case 'adjective' :
           document.body.style.backgroundColor = 'darkslateblue' 
           break;           
               case 'article' :
-
           document.body.style.backgroundColor = 'periwinke'
-          break;            
-
-          document.body.style.backgroundColor = 'periwinkle'            
-
+          break;                          
               case 'preposition' :
           document.body.style.backgroundColor = 'white' 
           break;           
               case 'conjunction' :
-
           document.body.style.backgroundColor = 'orange' 
           break;           
-
-          document.body.style.backgroundColor = 'orange';        
-
           };
 
           var wordEl = dictData.entries[0].entry;
