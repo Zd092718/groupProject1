@@ -51,15 +51,6 @@ fetch(randomWord)
       
           var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
 
-
-        if(dictData.entries === []){
-            window.location.reload();
-        };
-             return resetFunction();
-        }
-
-          var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
-
           switch (partOfSpeech){
               case 'noun' : 
           document.body.style.backgroundColor = 'red'
