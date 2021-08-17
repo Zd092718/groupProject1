@@ -48,27 +48,28 @@ fetch(randomWord)
     .then(dictData => {
         console.log(dictData)
         console.log(word)
-        //all subsequent calls need to go here if using the fetch
-          // var partofspeech = dictData.entries[0].lexemes[0].partofspeech; //redefine this to match console.log desired in the localStorage
 
-          // switch (partofspeech){
-          //     case x : //this should be part of speech in the localStorage data
-          // document.body.style.backgroundColor = 'red'
-          //     case b :
-          // document.body.style.backgroundColor = 'green'            
-          //     case c :
-          // document.body.style.backgroundColor = 'brown'            
-          //     case d :
-          // document.body.style.backgroundColor = 'lemonchiffon'            
-          //     case e :
-          // document.body.style.backgroundColor = 'darkslateblue'            
-          //     case c :
-          // document.body.style.backgroundColor = 'periwinke'            
-          //     case d :
-          // document.body.style.backgroundColor = 'white'            
-          //     case e :
-          // document.body.style.backgroundColor = 'orange'            
-          // };
+        var partOfSpeech = dictData.entries[0].lexemes[0].partOfSpeech; 
+
+        switch (partOfSpeech){
+            case 'noun' : 
+        document.body.style.backgroundColor = 'red'
+            case 'verb' :
+        document.body.style.backgroundColor = 'green'            
+            case 'adverb' :
+        document.body.style.backgroundColor = 'brown'            
+            case 'pronoun' :
+        document.body.style.backgroundColor = 'lemonchiffon'            
+            case 'adjective' :
+        document.body.style.backgroundColor = 'darkslateblue'            
+            case 'article' :
+        document.body.style.backgroundColor = 'periwinke'            
+            case 'preposition' :
+        document.body.style.backgroundColor = 'white'            
+            case 'conjunction' :
+        document.body.style.backgroundColor = 'orange'            
+        };
+
 
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
