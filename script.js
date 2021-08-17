@@ -28,7 +28,7 @@ fetch(randomWord)
 .then(genRando => {
   //random word dictionary data
     console.log(genRando)
-    var word = genRando.word;
+    var word = genRando.word.split('-')[0];
     // var dictApi = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
     var linguaApi = `https://lingua-robot.p.rapidapi.com/language/v1/entries/en/${word}`
     fetch(linguaApi, {
