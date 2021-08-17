@@ -11,7 +11,6 @@ function showDefinition(e){
     btn.classList.add('hide')
     resultsReturnEl.classList.remove('hide');
     generateData();
-    colorPart();
 }
 
 // api fetch
@@ -48,29 +47,30 @@ fetch(randomWord)
     .then(dictData => {
         console.log(dictData)
         console.log(word)
+      
+          var partOfSpeech = dictData.entries[0].lexemes[0].partOfSpeech; 
 
-        var partOfSpeech = dictData.entries[0].lexemes[0].partOfSpeech; 
-
-        switch (partOfSpeech){
-            case 'noun' : 
-        document.body.style.backgroundColor = 'red'
-            case 'verb' :
-        document.body.style.backgroundColor = 'green'            
-            case 'adverb' :
-        document.body.style.backgroundColor = 'brown'            
-            case 'pronoun' :
-        document.body.style.backgroundColor = 'lemonchiffon'            
-            case 'adjective' :
-        document.body.style.backgroundColor = 'darkslateblue'            
-            case 'article' :
-        document.body.style.backgroundColor = 'periwinke'            
-            case 'preposition' :
-        document.body.style.backgroundColor = 'white'            
-            case 'conjunction' :
-        document.body.style.backgroundColor = 'orange'            
-        };
+          switch (partOfSpeech){
+              case 'noun' : 
+          document.body.style.backgroundColor = 'red'
+              case 'verb' :
+          document.body.style.backgroundColor = 'green'            
+              case 'adverb' :
+          document.body.style.backgroundColor = 'brown'            
+              case 'pronoun' :
+          document.body.style.backgroundColor = 'lemonchiffon'            
+              case 'adjective' :
+          document.body.style.backgroundColor = 'darkslateblue'            
+              case 'article' :
+          document.body.style.backgroundColor = 'periwinke'            
+              case 'preposition' :
+          document.body.style.backgroundColor = 'white'            
+              case 'conjunction' :
+          document.body.style.backgroundColor = 'orange'            
+          };
 
 
+          
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
           wordPrint.classList.add('wordItem');
