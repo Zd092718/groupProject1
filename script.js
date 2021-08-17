@@ -45,28 +45,29 @@ fetch(randomWord)
     return response.json()
     })
     .then(dictData => {
-        console.log(dictData)
+        console.log(dictData.entries)
         console.log(word)
-      
-          var partOfSpeech = dictData.entries[0].lexemes[0].partOfSpeech; 
-
+        if(dictData.entries === []){
+          window.location.reload();
+        };
+          var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
           switch (partOfSpeech){
               case 'noun' : 
           document.body.style.backgroundColor = 'red'
               case 'verb' :
-          document.body.style.backgroundColor = 'green'            
+          document.body.style.backgroundColor = 'green'           
               case 'adverb' :
-          document.body.style.backgroundColor = 'brown'            
+          document.body.style.backgroundColor = 'brown'     
               case 'pronoun' :
-          document.body.style.backgroundColor = 'lemonchiffon'            
+          document.body.style.backgroundColor = 'lemonchiffon'        
               case 'adjective' :
           document.body.style.backgroundColor = 'darkslateblue'            
               case 'article' :
-          document.body.style.backgroundColor = 'periwinke'            
+          document.body.style.backgroundColor = 'periwinkle'            
               case 'preposition' :
           document.body.style.backgroundColor = 'white'            
               case 'conjunction' :
-          document.body.style.backgroundColor = 'orange'            
+          document.body.style.backgroundColor = 'orange';        
           };
 
 
@@ -74,13 +75,17 @@ fetch(randomWord)
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
           wordPrint.classList.add('wordItem');
-          wordPrint.textContent = wordEl;
+          wordPrint.textContent = 'Random word: ' + wordEl;
           resultsListEl.append(wordPrint)
           var definition = dictData.entries[0].lexemes[0].senses[0].definition;
           var defPrint = document.createElement('li');
           defPrint.classList.add('defItem');
-          defPrint.textContent = definition;
+          defPrint.textContent = 'Definition: ' + definition;
           resultsListEl.append(defPrint);
+          var posPrint = document.createElement('li');
+          posPrint.classList.add('posItem');
+          posPrint.textContent = 'Part of Speech: ' + partOfSpeech;
+          resultsListEl.append(posPrint);
     })
 })};
 
