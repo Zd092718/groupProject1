@@ -53,14 +53,17 @@ fetch(randomWord)
 
 
         if(dictData.entries === []){
-          window.location.reload();
+            window.location.reload();
         };
+             return resetFunction();
+        }
+
           var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
 
           switch (partOfSpeech){
               case 'noun' : 
           document.body.style.backgroundColor = 'red'
-            break;
+          break;
               case 'verb' :
           document.body.style.backgroundColor = 'green'
           break;            
@@ -69,20 +72,19 @@ fetch(randomWord)
           break;            
               case 'pronoun' :
           document.body.style.backgroundColor = 'lemonchiffon'
-          break;                        
+          break;
               case 'adjective' :
           document.body.style.backgroundColor = 'darkslateblue' 
           break;           
               case 'article' :
           document.body.style.backgroundColor = 'periwinke'
-          break;                 
+          break;                          
               case 'preposition' :
           document.body.style.backgroundColor = 'white' 
           break;           
               case 'conjunction' :
           document.body.style.backgroundColor = 'orange' 
           break;           
-
           };
 
           var wordEl = dictData.entries[0].entry;
@@ -103,7 +105,9 @@ fetch(randomWord)
 })};
 
 
-
+function resetFunction(){
+  window.location.reload();
+}
 
     //color link changes
     // will need to redefine parts of speech variable to match data from api
