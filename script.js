@@ -45,9 +45,16 @@ fetch(randomWord)
     return response.json()
     })
     .then(dictData => {
-        console.log(dictData)
+        console.log(dictData.entries)
         console.log(word)
+
       
+          var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
+
+
+        if(dictData.entries === []){
+          window.location.reload();
+        };
           var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
 
           switch (partOfSpeech){
@@ -62,19 +69,20 @@ fetch(randomWord)
           break;            
               case 'pronoun' :
           document.body.style.backgroundColor = 'lemonchiffon'
-          break;            
+          break;                        
               case 'adjective' :
           document.body.style.backgroundColor = 'darkslateblue' 
           break;           
               case 'article' :
           document.body.style.backgroundColor = 'periwinke'
-          break;            
+          break;                 
               case 'preposition' :
           document.body.style.backgroundColor = 'white' 
           break;           
               case 'conjunction' :
           document.body.style.backgroundColor = 'orange' 
           break;           
+
           };
 
           var wordEl = dictData.entries[0].entry;
@@ -87,6 +95,10 @@ fetch(randomWord)
           defPrint.classList.add('defItem');
           defPrint.textContent = definition;
           resultsListEl.append(defPrint);
+          var posPrint = document.createElement('li');
+          posPrint.classList.add('posItem');
+          posPrint.textContent = partOfSpeech;
+          resultsListEl.append(posPrint);
     })
 })};
 
