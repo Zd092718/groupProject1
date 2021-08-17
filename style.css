@@ -54,7 +54,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     list-style-type: none;
     font-size: .75em;
     text-align: center;
