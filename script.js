@@ -2,7 +2,7 @@
 // creates El for button and definition
 var btnEl = document.getElementById('btn')
 var resultsReturnEl = document.getElementById('results-return');
-var resultsListEl = document.getElementById('results-list')
+var resultsListEl = $('#results-list')
 
 // on click, hides button and shows definition
 btnEl.addEventListener('click', showDefinition)
@@ -69,17 +69,17 @@ fetch(randomWord)
           //     case e :
           // document.body.style.backgroundColor = 'orange'            
           // };
-          
+
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
+          wordPrint.classList.add('wordItem');
           wordPrint.textContent = wordEl;
           resultsListEl.append(wordPrint)
           var definition = dictData.entries[0].lexemes[0].senses[0].definition;
           var defPrint = document.createElement('li');
+          defPrint.classList.add('defItem');
           defPrint.textContent = definition;
           resultsListEl.append(defPrint);
-          
-
     })
 })};
 
