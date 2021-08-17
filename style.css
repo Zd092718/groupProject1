@@ -65,8 +65,20 @@ button {
 }
 
 .wordItem {
+    font-size: 2em;
+    margin-bottom: 1em;
+    border: black solid 5px;
+    border-radius: 1em;
+    background-color: black;
+    padding: 30px;
+    color: white;
+    position: relative;
+    bottom: 115px;
+    height: fit-content;
 
 }
 .defItem {
-    
+    position: relative;
+    bottom: 2em;
+    font-size: 1.2em;
 }
