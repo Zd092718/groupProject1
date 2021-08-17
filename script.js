@@ -69,17 +69,16 @@ fetch(randomWord)
           //     case e :
           // document.body.style.backgroundColor = 'orange'            
           // };
-          // var resultList = document.createElement('ul');
-          // resultsReturnEl.append(resultList);
+          
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
           wordPrint.textContent = wordEl;
-          resultsListEl.append(wordPrint);
+          resultsListEl.append(wordPrint)
           var definition = dictData.entries[0].lexemes[0].senses[0].definition;
           var defPrint = document.createElement('li');
           defPrint.textContent = definition;
           resultsListEl.append(defPrint);
-          var example = dictData.entries[0];
+          
 
     })
 })};
