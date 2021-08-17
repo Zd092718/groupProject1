@@ -29,8 +29,15 @@ fetch(randomWord)
   //random word dictionary data
     console.log(genRando)
     var word = genRando.word;
-    var dictApi = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-    fetch(dictApi)
+    // var dictApi = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+    var linguaApi = `https://lingua-robot.p.rapidapi.com/language/v1/entries/en/${word}`
+    fetch(linguaApi, {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": "3fc93a864fmsha6eb4d6d234e809p1d678fjsn6ae16889f063",
+        "x-rapidapi-host": "lingua-robot.p.rapidapi.com"
+    }
+    })
 	  .then (response =>{
           if(!response.ok){
         throw response.json();
@@ -39,6 +46,8 @@ fetch(randomWord)
     })
     .then(dictData => {
         console.log(dictData)
+        console.log(word)
+        //all subsequent calls need to go here if using the fetch
     })
 })};
 
