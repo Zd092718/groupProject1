@@ -75,16 +75,16 @@ fetch(randomWord)
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
           wordPrint.classList.add('wordItem');
-          wordPrint.textContent = 'Random word: ' + wordEl;
+          wordPrint.textContent = wordEl;
           resultsListEl.append(wordPrint)
           var definition = dictData.entries[0].lexemes[0].senses[0].definition;
           var defPrint = document.createElement('li');
           defPrint.classList.add('defItem');
-          defPrint.textContent = 'Definition: ' + definition;
+          defPrint.textContent = definition;
           resultsListEl.append(defPrint);
           var posPrint = document.createElement('li');
           posPrint.classList.add('posItem');
-          posPrint.textContent = 'Part of Speech: ' + partOfSpeech;
+          posPrint.textContent = partOfSpeech;
           resultsListEl.append(posPrint);
     })
 })};
