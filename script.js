@@ -30,7 +30,6 @@ fetch(randomWord)
   //random word dictionary data
     console.log(genRando)
     var word = genRando.word.split('-')[0];
-    // var dictApi = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
     var linguaApi = `https://lingua-robot.p.rapidapi.com/language/v1/entries/en/${word}`
     fetch(linguaApi, {
       "method": "GET",
@@ -95,11 +94,6 @@ fetch(randomWord)
           resultsListEl.append(posPrint);
     })
 })};
-
-
-function resetFunction(){
-  window.location.reload();
-}
 
     //color link changes
     // will need to redefine parts of speech variable to match data from api
