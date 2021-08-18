@@ -57,34 +57,6 @@ fetch(randomWord)
         };
           var partOfSpeech = dictData.entries[0].interpretations[0].partOfSpeech; 
 
-          switch (partOfSpeech){
-              case 'noun' : 
-          document.body.style.backgroundColor = 'red'
-            break;
-              case 'verb' :
-          document.body.style.backgroundColor = 'green'
-          break;            
-              case 'adverb' :
-          document.body.style.backgroundColor = 'brown'
-          break;            
-              case 'pronoun' :
-          document.body.style.backgroundColor = 'lemonchiffon'
-          break;                        
-              case 'adjective' :
-          document.body.style.backgroundColor = 'darkslateblue' 
-          break;           
-              case 'article' :
-          document.body.style.backgroundColor = 'periwinke'
-          break;                 
-              case 'preposition' :
-          document.body.style.backgroundColor = 'white' 
-          break;           
-              case 'conjunction' :
-          document.body.style.backgroundColor = 'orange' 
-          break;           
-
-          };
-
           var wordEl = dictData.entries[0].entry;
           var wordPrint = document.createElement('li');
           wordPrint.classList.add('wordItem');
@@ -99,14 +71,45 @@ fetch(randomWord)
           posPrint.classList.add('posItem');
           posPrint.textContent = partOfSpeech;
           resultsListEl.append(posPrint);
+          
+          switch (partOfSpeech){
+              case 'noun' : 
+          document.body.style.backgroundColor = 'red'
+          document.querySelector('.posItem').style.color = 'red'
+            break;
+              case 'verb' :
+          document.body.style.backgroundColor = 'green'
+          document.querySelector('.posItem').style.color = 'green'
+          break;            
+              case 'adverb' :
+          document.body.style.backgroundColor = 'brown'
+          document.querySelector('.posItem').style.color = 'brown'
+          break;            
+              case 'pronoun' :
+          document.body.style.backgroundColor = 'lemonchiffon'
+          document.querySelector('.posItem').style.color = 'lemonchiffon'
+          break;                        
+              case 'adjective' :
+          document.body.style.backgroundColor = 'darkslateblue'
+          document.querySelector('.posItem').style.color = 'darkslateblue' 
+          break;           
+              case 'article' :
+          document.body.style.backgroundColor = 'periwinke'
+          document.querySelector('.posItem').style.color = 'periwinke'
+          break;                 
+              case 'preposition' :
+          document.body.style.backgroundColor = 'white' 
+          document.querySelector('.posItem').style.color = 'white'
+          break;           
+              case 'conjunction' :
+          document.body.style.backgroundColor = 'orange' 
+          document.querySelector('.posItem').style.color = 'orange'
+          break;           
+
+          };
+
+
     })
 })};
-
-
-
-
-    //color link changes
-    // will need to redefine parts of speech variable to match data from api
-    // will need to change colors of background to what you wants
 
 
