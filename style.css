@@ -32,7 +32,7 @@ body {
     background: rgb(162, 163, 162);
     box-shadow: 12px 12px 2px 1px rgb(12, 12, 12);
 }
-
+/* box shadow to the button and changes cursor */
 button {
     border: 2px rgb(12, 12, 12);
     border-style: outset;
@@ -63,20 +63,20 @@ button {
 .hide{
     display: none;
 }
-
+/* adds pill border  */
 .wordItem {
     font-size: 2em;
     margin-bottom: 1em;
-    border: black solid 5px;
+    border: rgb(12, 12, 12) solid .2em;
     border-radius: 1em;
-    background-color: black;
-    padding: 30px;
-    color: white;
+    background-color: rgb(12, 12, 12);
+    padding: 1em;
+    color: rgb(228, 231, 231);
     position: relative;
-    bottom: 115px;
+    top: -2em;
     height: fit-content;
-
 }
+
 .defItem {
     position: relative;
     bottom: 2em;
