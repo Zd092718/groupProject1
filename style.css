@@ -75,6 +75,7 @@ button {
     position: relative;
     top: -2em;
     height: fit-content;
+    max-width: fit-content;
 }
 
 .defItem {
