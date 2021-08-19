@@ -25,19 +25,30 @@
 
 
 ## About The Project
+Vernac-u-Learn
 
 ![screenshot](./assets/Screenshot.png)
 
 
-Vernac-u-Learn
+![screenshot](./assets/noun.png)
+
+
+![screenshot](./assets/adjective.png)
+
 
 Click "Vernac-u-Learn" to learn about a random word and its definition! 
-
-### Built With
 
 * [https://zd092718.github.io/vernac-u-learn/]()
 * [https://github.com/Zd092718/vernac-u-learn.git]()
 
+### Built With
+
+* HTML
+* CSS
+* Javascript
+* Bootstrap
+* Wordnik API
+* Lingua robot API
 
 
 
@@ -79,15 +90,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Zack Dowd - [email]()
+Zack Dowd - [zdowd2796@gmail.com](zdowd2796@gmail.com)
 
-Micah Conn - [email]()
+Micah Conn - [mcoxconn@gmail.com](mcoxconn@gmail.com)
 
-Kyle McWilliams - [email]()
+Kyle McWilliams - [mcwilliams.kylel@gmail.com](mcwilliams.kylel@gmail.com)
 
-Jordan soh - [email]()
+Jordan soh - [Jordansoh14@gmail.com](Jordansoh14@gmail.com)
 
-Project Link: [GitHub Repository](https://zd092718.github.io/vernac-u-learn/)
+Project Link: [Project link](https://zd092718.github.io/vernac-u-learn/)
 
 
 
@@ -95,3 +106,5 @@ Project Link: [GitHub Repository](https://zd092718.github.io/vernac-u-learn/)
 ## Acknowledgements
 
 * [othneildrew README template](https://github.com/othneildrew/Best-README-Template)
+* [Wordnik API Documents](https://developer.wordnik.com/docs)
+* [Lingua Robot API Documents](https://linguarobot.docs.apiary.io/#) 
